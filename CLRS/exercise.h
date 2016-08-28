@@ -24,3 +24,6 @@ void counting_sort_in_place(vector<int> &a, int k);
 void columnsort(int *a, size_t r, size_t s);
 int iterative_randomized_select(int *a, size_t p, size_t r, size_t i);
 int fun93(int *a, size_t p, size_t r, size_t i);
+
+List<int> *revert(List<int> *head);
+size_t print_tree(tree_t *tree, int *out);

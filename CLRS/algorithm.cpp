@@ -661,29 +661,9 @@ int select(int *a, size_t p, size_t r, size_t i)
 	}
 }
 
-////栈和队列
-//unsigned char stack[STACK_SIZE];
-//unsigned char queue[QUEUE_SIZE];
-//unsigned char *sp = stack;
-//unsigned char *qhead = queue;
-//unsigned char *qtail = queue;
-//
-////链表
-//dlist *list_search(dlist *l, int k)
-//{
-//	dlist *x = l;
-//	while (x != nullptr && x->key != k)
-//	{
-//		x = x->next;
-//	}
-//	return x;
-//}
-//
-//void list_insert(dlist *l, dlist *x)
-//{
-//	x->next = l;
-//	if (l != nullptr)
-//	{
-//		l->prev = x;
-//	}
-//}
+//栈和队列
+unsigned char stack[STACK_SIZE];
+unsigned char queue[QUEUE_SIZE];
+unsigned char *sp = stack;
+unsigned char *qhead = queue;
+unsigned char *qtail = queue;

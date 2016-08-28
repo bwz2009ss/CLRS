@@ -38,23 +38,3 @@ int randomized_select(int *a, size_t p, size_t r, size_t i);
 size_t fixed_partition(int *a, size_t p, size_t r, int x);
 int select(int *a, size_t p, size_t r, size_t i);
 
-//#define STACK_SIZE 4096
-//#define QUEUE_SIZE 4096
-//extern unsigned char stack[STACK_SIZE];
-//extern unsigned char queue[QUEUE_SIZE];
-//extern unsigned char *sp;
-//extern unsigned char *qhead;
-//extern unsigned char *qtail;
-//#define STACK_EMPTY() (sp == stack)
-//#define PUSH(x) (*++sp = (x))
-//#define POP() (*sp--) 
-//#define QUEUE_EMPTY (qhead == qtail)
-//#define ENQUEUE(x) ((qtail - queue == QUEUE_SIZE - 1) ? (*qtail = x, qtail = queue) : (*qtail++ = x))
-//#define DEQUEUE() ((qhead - queue == QUEUE_SIZE - 1) ? (qhead = queue, queue[QUEUE_SIZE - 1])\
-//					: (*qhead++))
-//struct dlist
-//{
-//	dlist *prev;
-//	dlist *next;
-//	int key;
-//};

@@ -51,3 +51,11 @@ template<typename T> struct BinaryTree
 	BinaryTree *left;
 	BinaryTree *right;
 };
+
+struct tree_t
+{
+	tree_t *left;
+	tree_t *right;
+	tree_t *parent;
+	int key;
+};

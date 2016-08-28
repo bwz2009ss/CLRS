@@ -54,8 +54,34 @@ int main()
 	int a1[18] = { 10,8,12,16,4,18,14,7,1,9,15,3,5,17,6,11,2,13 };
 	int a2[19] = { 10,8,12,16,4,18,14,7,19,9,15,3,5,17,6,11,2,13,1 };
 
-	for (auto i = 1; i <= 19; i++)
+	tree_t tree[8];
+	for (int i = 0; i < 8; i++)
 	{
-		cout << fun93(a2, 0, 18, i) << endl;
+		tree[i].key = i + 1;
 	}
+	tree[0].parent = nullptr;
+	tree[0].left = &tree[1];
+	tree[0].right = &tree[2];
+	tree[1].parent = &tree[0];
+	tree[1].left = &tree[3];
+	tree[1].right = &tree[4];
+	tree[2].parent = &tree[0];
+	tree[2].left = &tree[5];
+	tree[2].right = &tree[6];
+	tree[3].parent = &tree[1];
+	tree[3].left = nullptr;
+	tree[3].right = &tree[7];
+	tree[4].parent = &tree[1];
+	tree[4].left = nullptr;
+	tree[4].right = nullptr;
+	tree[5].parent = &tree[2];
+	tree[5].left = nullptr;
+	tree[5].right = nullptr;
+	tree[6].parent = &tree[2];
+	tree[6].left = nullptr;
+	tree[6].right = nullptr;
+	tree[7].parent = &tree[3];
+	tree[7].left = nullptr;
+	tree[7].right = nullptr;
+	auto x = print_tree(tree, a2);
 }

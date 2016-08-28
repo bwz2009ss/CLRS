@@ -575,3 +575,54 @@ int fun93(int *a, size_t p, size_t r, size_t i)
 	delete[] b;
 	return m;
 }
+
+//10.2-7
+List<int> *revert(List<int> *head)
+{
+	List<int> *curr, *prev, *next;
+	prev = head;
+
+	if (head == nullptr) return nullptr;
+
+	curr = prev->next;
+	while (curr != nullptr)
+	{
+		next = curr->next;
+		curr->next = prev;
+		prev = curr;
+		curr = next;
+	}
+	head->next = nullptr;
+
+	return prev;
+}
+
+//10.4-5
+size_t print_tree(tree_t *tree, int *out)
+{
+	size_t i = 0;
+	tree_t *prev = tree->parent;
+
+	while (tree)
+	{
+		if (prev == tree->parent)
+		{
+			out[i++] = tree->key;
+			prev = tree;
+			tree = tree->left ? tree->left : tree->right ?
+				tree->right : tree->parent;
+		}
+		else if (prev == tree->left && tree->right)
+		{
+			prev = tree;
+			tree = tree->right;
+		}
+		else
+		{
+			prev = tree;
+			tree = tree->parent;
+		}
+	}
+
+	return i;
+}
